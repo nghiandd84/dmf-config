@@ -1,0 +1,7 @@
+{
+  "name": "dmf_config",
+  "exposes": {
+    "./services": "./src/services/index",
+    "./store": "./src/store/index"
+  }
+}
