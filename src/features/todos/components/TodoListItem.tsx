@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface Props {
   title: string;
-  onRemoveClick: () => void;
+  onRemoveClick?: () => void;
 }
 
 function TodoListItem({ title, onRemoveClick }: Props) {

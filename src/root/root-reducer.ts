@@ -11,13 +11,13 @@ const rootReducer = (history: History) =>
   combineReducers({
     router: connectRouter(history),
     user: userStore.reducer.userReducer,
-    config: reducer.userReducer
+    config: reducer.configReducer
   });
 
 const rootReducerType = combineReducers({
   router: connectRouter(createBrowserHistory()),
   user: userStore.reducer.userReducer,
-  config: reducer.userReducer
+  config: reducer.configReducer
 });
 
 export type RootState = StateType<typeof rootReducerType>;

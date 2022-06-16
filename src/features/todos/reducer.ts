@@ -4,14 +4,14 @@ import { createReducer } from 'typesafe-actions';
 import { loadTodosAsync, addTodo, removeTodo } from './actions';
 import { Todo } from './model/Todo';
 
-export const isLoadingTodos = createReducer<boolean>(false as boolean)
+export const isConfigLoading = createReducer<boolean>(false as boolean)
   .handleAction([loadTodosAsync.request], (state, action) => true)
   .handleAction(
     [loadTodosAsync.success, loadTodosAsync.failure],
     (state, action) => false
   );
 
-export const todos = createReducer<Todo[]>([
+export const configTodos = createReducer<Todo[]>([
   {
     id: '0',
     title: 'You can add new todos using the form or load saved snapshot...',
@@ -24,11 +24,11 @@ export const todos = createReducer<Todo[]>([
   );
 
 const todosReducer = combineReducers<{
-  isLoadingTodos: boolean,
-  todos: Todo[]
+  isConfigLoading: boolean,
+  configTodos: Todo[]
 }>({
-  isLoadingTodos,
-  todos,
+  isConfigLoading: isConfigLoading,
+  configTodos: configTodos,
 });
 
 export default todosReducer;

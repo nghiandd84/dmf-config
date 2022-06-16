@@ -2,12 +2,12 @@ import * as React from 'react';
 import { RouterState } from 'connected-react-router';
 
 import { connect } from 'react-redux';
-import { UserState } from '../../../store/reducer';
+import { ConfigState } from '../../../store/reducer';
 
 import { loadTodosAsync, saveTodosAsync } from '../actions';
 
 const mapStateToProps = (state: {
-  user: UserState;
+  user: ConfigState;
   router: RouterState<any>;
 }) => ({
   isLoading: state.user.todo.isLoadingTodos,

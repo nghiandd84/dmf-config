@@ -3,16 +3,16 @@ import todosReducer from '../features/todos/reducer';
 import { StateType } from 'typesafe-actions';
 import { RouterState } from 'connected-react-router';
 
-const userReducer = combineReducers({
-  todo: todosReducer,
+const configReducer = combineReducers({
+  todoModule: todosReducer,
 });
 
-export type UserState = StateType<typeof userReducer>;
+export type ConfigState = StateType<typeof configReducer>;
 
 export type AppState = {
   [key: string]: any;
   router: RouterState<any>;
-  user: UserState;
+  config: ConfigState;
 };
 
-export { userReducer };
+export { configReducer };
