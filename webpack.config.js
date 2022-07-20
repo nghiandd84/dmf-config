@@ -52,6 +52,9 @@ module.exports = (env, argv) => {
           dmf_ui:
             'dmf_ui@https://nghiandd84.github.io/dmf-ui/remoteEntry.js?rd=' +
             rd,
+          // dmf_ui:
+          //   'dmf_ui@http://localhost:2000/remoteEntry.js?rd=' +
+          //   rd,
           dmf_layout:
             'dmf_layout@https://nghiandd84.github.io/dmf-layout/remoteEntry.js?rd=' +
             rd,
